@@ -1,33 +1,51 @@
-
+## 
+# Defines the Timer State class
+# This is a pure abstract class
 
 class TimerState
 
-	# def initialize
+	## 
+	# TimerState constructor.
+	def initialize
 		# nothing to do here
-	# end
+	end
 
+	## 
+	# When the state transists to the current state, it will run this code.
+	# Params:
+	# +context+:: the context for the state.
 	def run(context)
-		# puts "#{to_str}: run"
 		# nothing to do here
 	end
 
+	## 
+	# Function performed when onStartTimer event is received.
+	# Params:
+	# +context+:: the context for the state.
 	def onStartTimer(context, seconds)
-		# puts "#{to_str}: onStartTimer"
 		# nothing to do here
 	end
 
+	##
+	# Function performed when onCancelTimer event is received.
+	# Params:
+	# +context+:: the context for the state.
 	def onCancelTimer(context)
-		puts "#{to_str}: onCancelTimer"
 		# nothing to do here
 	end
 
+	##
+	# Function performed when onFinishTimer event is received.
+	# Params:
+	# +context+:: the context for the state.
 	def onFinishTimer(context)
-		puts "#{to_str}: onFinishTimer"
 		# nothing to do here
 	end
 
-	# def to_str
+	##
+	# Returns the state name.
+	def to_str
 		# nothing to do here
-	# end
+	end
 
 end
